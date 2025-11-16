@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" class="weatherform">
-        <div class="inputwbut">
-        <input type="text" class="cityinput" plcaeholder="Entrez la ville">
-        <button type="submit">Get weather</button>
-    </form>
-        </div>
-    <div class="card">
+    <div class="wrapper">
+        <form action="" class="weatherform">
+            <h2 class="title">Check the weather now !</h2>
+            <div class="inputwbut">
+                <input type="text" class="cityinput" placeholder="Enter the city">
+                <button type="submit">Get weather</button>
+            </div>
+        </form>
+        <div class="card"></div>
     </div>
     <script src="index.js"></script>
+    <div class="clouds">
+    <img src="images/cloud1.jpg" style="top: 20px; width: 350px;">
+    <img src="images/cloud2.jpg" style="top: 160px; width: 350px; animation-duration: 80s;">
+    <img src="images/cloud3.jpg" style="top: 350px; width: 300px; animation-duration: 50s;">
+</div>
 </body>
 </html>
