@@ -11,7 +11,7 @@ body {
 
 .wrapper {
     width: 100%;
-    max-width: 450px;
+    max-width: 1000px;
 }
 
 .title h2 {
@@ -24,8 +24,11 @@ body {
 }
 
 .weatherform {
-    margin-bottom: 20px;
-}
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    text-align: center;}
 
 .inputwbut {
     display: flex;
@@ -129,7 +132,7 @@ button[type="submit"]:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 765px) {
     .title h2 {
         font-size: 1.5rem;
     }
@@ -146,6 +149,7 @@ button[type="submit"]:hover {
         width: 100%;
         font-size: 1rem;
     }
+
 }
 .clouds {
     position: fixed;
@@ -169,4 +173,71 @@ button[type="submit"]:hover {
     0% { transform: translateX(-2%); }
     100% { transform: translateX(100%); }
 }
+.hourly {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin-top: 20px;
+}
 
+.hour-card {
+  min-width: 80px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+.hourly-section {
+    margin-top: 30px;
+    width: 100%;
+}
+.hourly-title{
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.hourly-container{
+    display: flex;
+    overflow: auto;
+    gap: 16px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+.hourly-item{
+    background: linear-gradient(135deg, #667eea 0%, #4e0d4b 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 120px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.hourly-item:hover{
+    transform: translateY(-6px);
+}
+.hourly-time{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hourly-emoji {
+font-size: 40px;
+margin: 10px 0;
+}
+
+.hourly-temp {
+font-size: 24px;
+font-weight: bold;
+margin: 5px 0;
+}
+
+.hourly-desc {
+font-size: 14px;
+opacity: 0.9;
+text-transform: capitalize;
+}
